@@ -1,0 +1,11 @@
+apturl==0.5.2
+Brlapi==0.7.0
+command-not-found==0.3
+cupshelpers==1.0
+defer==1.0.6
+distro-info===0.23ubuntu1
+duplicity==0.8.12.0
+language-selector==0.1
+louis==3.12.0
+
+lz4==3.0.2+dfsg
