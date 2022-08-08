@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>INVOICE</title>
+<meta charset="UTF-8">
+<meta name="description" content="meta_name_content">
+<meta name="keywords" content="HTML, CSS">
+<meta name="author" content="s1sds28">
+<link rel="stylesheet" type="text/css" href="css_stylesheet.css">
+<head>
+<body>
+<html>
+  <body>
+    <h1>INVOICE</h1>
+    <p>{{title}}</p>
+    <p>{{invoice_data}}</p>
+    <p>{{info_list}}</p>
+    <hr>
+    <h1>BILL TO:</h1>
+    <p>{{bill_to}}
+    <br>
+    <br>
+    <h1>BILL FROM:</h1>
+    <p>{{bill_from}}</p>
+    <br>
+    <br>
+    <table>
+      <caption><h1>LINE ITEMS:</h1></<caption>
+    <tr>
+      <th><h2 align="left">LINE ITEM:</h2></th>
+      <th><h2 align="right">AMOUNT $</h2></th>
+    </tr>
+    <tr>
+      <td>{{line_item}}</td>
+      <td><p align="right">{{monetary_value}}</p></td>
+    </tr>
+    </table>
+  </body>
+</html>
