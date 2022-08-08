@@ -20,6 +20,7 @@ class InvoiceHighlight(generics.GenericAPIView):
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
+        'admin_link': 'http://127.0.0.1:8000/admin/',
         'users': reverse('user-list', request=request, format=format),
         'invoices': reverse('invoice-list', request=request, format=format)
     })
