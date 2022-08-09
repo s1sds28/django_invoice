@@ -28,9 +28,11 @@ cd django_invoice
 pip install - r requirements.txt
 ###### make migrations
 python manage.py migrate
-###### python manage.py createsuperuser
--> create username, email, and password when asked
+###### create user
+python manage.py createsuperuser
+
+-> enter username, email, and password when asked
 ###### Run program
 python manage.py runserver
-###### Use the appliction
-Use the link from API root localhost:8000/admin/
+###### Use the application
+Use the link from API root localhost:8000/admin/ to use the application
