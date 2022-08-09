@@ -15,9 +15,13 @@ action: export invoicesPDF.
 
 ### Installation
 From terminal
+
 mkdir invoice_application
+
 cd invoice_application
+
 git clone XXX
+
 ###### To create a virtual environment
 virtualenv env
 ###### To activate virtual environment
