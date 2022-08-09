@@ -29,6 +29,9 @@ source env/bin/activate
 cd django_invoice
 ###### Install requirements
 pip install - r requirements.txt
+###### make migrations
+python manage.py makemigrations
+python manage.py migrate 
 ###### Run program
 python manage.py runserver
 ###### Use the appliction
