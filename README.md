@@ -14,11 +14,9 @@ I can use the django application to easily create and store invoices with a simp
 action: export invoicesPDF.
 
 ### Installation
+Using python 3.8
+
 From terminal
-
-mkdir invoice_application
-
-cd invoice_application
 
 git clone "copy the url from code tab on github"
 
@@ -31,10 +29,8 @@ cd django_invoice
 ###### Install requirements
 pip install - r requirements.txt
 ###### make migrations
-python manage.py makemigrations
-
 python manage.py migrate
 ###### Run program
 python manage.py runserver
 ###### Use the appliction
-Use the link from API root localhost:8000/admin/ to use the application
+Use the link from API root localhost:8000/admin/
