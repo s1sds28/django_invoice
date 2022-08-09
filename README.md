@@ -2,23 +2,21 @@
 Django Invoice Application
 
 ### Project Description:
-Application to create a simple invoices. This application allows full CRUD
-functionality relating to invoices in the Django REST framework.
+A Django application to create invoices. This application allows full CRUD functionality relating to invoices in the Django REST framework.
 
 ### Reason for building
-I wanted this application for myself. Many book-keeping and invoice software programs come with too many accessories. I wanted to create and store my own invoices.   
-I only need to write a few invoices a month, so this is perfect for me and my personal use.
+I wanted this application for myself. Many bookkeeping programs come with too many accessories. I wanted to create and store my own invoices.
 
 ### How it works for me
-I can use the django application to easily create and store invoices with a simple naming convention <title><month><year> for the title and other basic information for record keeping purposes. If I want to print or email a specific invoice I use the
-action: export invoicesPDF.
+The application use case is to easily create, read, update, and delete invoices. If I want to download a specific invoice use the admin action: export invoicesPDF.
 
 ### Installation
+
 Using python 3.8
 
 From terminal
 
-git clone "copy the url from code tab on github"
+git clone https://github.com/s1sds28/django_invoice.git
 
 ###### To create a virtual environment
 virtualenv env
@@ -30,6 +28,8 @@ cd django_invoice
 pip install - r requirements.txt
 ###### make migrations
 python manage.py migrate
+###### python manage.py createsuperuser
+-> create username, email, and password when asked
 ###### Run program
 python manage.py runserver
 ###### Use the appliction
