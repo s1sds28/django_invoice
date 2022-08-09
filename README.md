@@ -20,18 +20,20 @@ mkdir invoice_application
 
 cd invoice_application
 
-git clone XXX
+git clone "copy the url from code tab on github"
 
 ###### To create a virtual environment
 virtualenv env
 ###### To activate virtual environment
 source env/bin/activate
+###### change dir
 cd django_invoice
 ###### Install requirements
 pip install - r requirements.txt
 ###### make migrations
 python manage.py makemigrations
-python manage.py migrate 
+
+python manage.py migrate
 ###### Run program
 python manage.py runserver
 ###### Use the appliction
