@@ -27,8 +27,5 @@ cd django_invoice
 pip install - r requirements.txt
 ###### Run program
 python manage.py runserver
-###### Login
-username: admin
-password: testpass123
 ###### Use the appliction
 Use the link from API root localhost:8000/admin/ to use the application
