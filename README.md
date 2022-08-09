@@ -5,7 +5,7 @@ Django Invoice Application
 Application to create a simple invoices. This application allows full CRUD
 functionality relating to invoices in the Django REST framework.
 
-##### Reason for building
+### Reason for building
 I wanted this application for myself. Many book-keeping and invoice software programs come with too many accessories. I wanted to create and store my own invoices.   
 I only need to write a few invoices a month, so this is perfect for me and my personal use.
 
