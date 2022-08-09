@@ -19,7 +19,7 @@ mkdir invoice_application
 
 cd invoice_application
 
-git clone "copy the url from code tab on github"
+git clone https://github.com/s1sds28/django_invoice.git
 
 ###### To create a virtual environment
 virtualenv env
@@ -39,5 +39,5 @@ python manage.py createsuperuser
 -> enter username, email, and password when asked
 ###### Run program
 python manage.py runserver
-###### Use the application 
+###### Use the application
 Use the link from API root localhost:8000/admin/ to use the application
