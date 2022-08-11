@@ -13,6 +13,8 @@ from .views import InvoiceDetail
 
 from django.test.client import encode_multipart, RequestFactory
 
+
+
 # Create your tests here.
 class InvoiceTests(APITestCase):
     fixtures = ["main.json"]
@@ -58,7 +60,7 @@ class InvoiceTests(APITestCase):
         data = {
         "monetary_value": new_value
         }
-        
+
         response = self.client.put(url, data, format='json')
         # self.assertEqual(response.status_code, 200)
         query = self.client.get('/invoices/1/')
@@ -68,3 +70,12 @@ class InvoiceTests(APITestCase):
         self.assertEqual(query, new_value)
 
     # Delete
+    def test_delete_invoice(self):
+        self.client.login(username='admin', password='testpass123')
+        """
+        ensure we can delete an invoice
+        """
+        url = reverse('invoice-detail', args='1')
+        response = self.client.delete(url)
+        self.client.logout()
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
