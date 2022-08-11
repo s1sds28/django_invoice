@@ -30,7 +30,7 @@ class InvoiceTests(APITestCase):
         url = reverse('invoice-detail', args='1')
         response = self.client.get(url, format='json')
         self.client.logout()
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     # Update test, ensure we can unpdate an invoice
     def test_update_invoice(self):
