@@ -22,7 +22,7 @@ class InvoiceTests(APITestCase):
         }
         response = self.client.post(url, data, format='json')
         self.client.logout()
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     # Read test, ensure we can read a invoice
     def test_read_invoice(self):
