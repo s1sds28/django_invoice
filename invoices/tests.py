@@ -1,30 +1,16 @@
-from django.test import TestCase
+# from django.test import TestCase
 
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase, APIRequestFactory, APIClient
-from invoices.models import Invoice
-
-from django.contrib.auth.models import Group
-
-import json
-
-from .views import InvoiceDetail
-
-from django.test.client import encode_multipart, RequestFactory
-
-
 
 # Create your tests here.
 class InvoiceTests(APITestCase):
     fixtures = ["main.json"]
 
-    # Create test
+    # Create test, ensure we can create a new invoice object
     def test_create_invoice(self):
         self.client.login(username='admin', password='testpass123')
-        """
-        ensure we can create a new invoice object
-        """
         url = reverse('invoice-list')
         data = {
         "title": "test",
@@ -37,44 +23,29 @@ class InvoiceTests(APITestCase):
         response = self.client.post(url, data, format='json')
         self.client.logout()
         self.assertEqual(response.status_code, 201)
-    # Read test
+
+    # Read test, ensure we can read a invoice
     def test_read_invoice(self):
         self.client.login(username='admin', password='testpass123')
-        """
-        ensure we can read a invoice
-        """
-
         url = reverse('invoice-detail', args='1')
         response = self.client.get(url, format='json')
         self.client.logout()
         self.assertEqual(response.status_code, 200)
 
-    # Update
+    # Update test, ensure we can unpdate an invoice
     def test_update_invoice(self):
         self.client.login(username='admin', password='testpass123')
-        new_value = 123456789
-        """
-        ensure we can update an invoice
-        """
         url = reverse('invoice-detail', args='1')
         data = {
-        "monetary_value": new_value
+        "monetary_value": 123456789
         }
-
         response = self.client.put(url, data, format='json')
-        # self.assertEqual(response.status_code, 200)
-        query = self.client.get('/invoices/1/')
-        query = json.loads(query.content)
-        query = query.get('monetary_value')
         self.client.logout()
-        self.assertEqual(query, new_value)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    # Delete
+    # Delete test, ensure we can delete an invoice
     def test_delete_invoice(self):
         self.client.login(username='admin', password='testpass123')
-        """
-        ensure we can delete an invoice
-        """
         url = reverse('invoice-detail', args='1')
         response = self.client.delete(url)
         self.client.logout()
