@@ -27,7 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Settings for test
+REST_FRAMEWORK = {
 
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+}
 # Application definition
 
 INSTALLED_APPS = [

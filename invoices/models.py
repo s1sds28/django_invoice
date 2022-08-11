@@ -17,7 +17,7 @@ class Invoice(models.Model):
     bill_to = models.CharField(max_length=100, blank=True, default='')
     bill_from = models.CharField(max_length=100, blank=True, default='')
     line_item = models.CharField(max_length=100, blank=True, default='')
-    monetary_value = models.PositiveIntegerField()
+    monetary_value = models.PositiveIntegerField(blank=True, default=0)
 
     class Meta:
         ordering = ['created']
